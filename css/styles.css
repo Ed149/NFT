@@ -1,0 +1,190 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Outfit',sans-serif;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #0d192b;
+}
+
+.wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  background-color: #14253d;
+  width: 500px;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.card__image {
+  position: relative;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url("../img/image-equilibrium.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  background-position: center center;
+}
+
+.card__image_view {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  left: 50%;
+  margin-left: -22px;
+  z-index: 11;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+
+.card__image:hover {
+  cursor: pointer;
+}
+
+.card__image:hover::before {
+  opacity: 1;
+}
+
+.card__image:hover .card__image_view {
+  opacity: 1;
+}
+
+.card__image::before {
+  content: '';
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.377);
+  z-index: 10;
+}
+
+.card__title {
+  color: white;
+  margin: 1.4rem 0;
+}
+
+.card__title:hover {
+  cursor: pointer;
+  color: #00fff7;
+}
+
+.card__text {
+  color: #586b86;
+  font-size: 15px;
+  margin-bottom: 1.4rem;
+}
+
+.card__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.4rem;
+}
+
+.card__stats-value {
+  color: #00fff7;
+  letter-spacing: 3px;
+}
+
+.card__stats-time {
+  font-size: 18px;
+  color: #586b86;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__stats-time img {
+  margin-top: .2rem;
+  margin-right: .5rem;
+}
+
+.card__user {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.4rem;
+}
+
+.card__user::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #586b86;
+  position: absolute;
+  top: -20px;
+}
+
+.card__user_img {
+  width: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 1.3rem;
+}
+
+.card__user_info {
+  font-size: 18px;
+  color: #586b86;
+}
+
+.card__user_info span {
+  color: white;
+}
+
+.card__user_info span:hover {
+  cursor: pointer;
+  color: #00fff7;
+}
+/*# sourceMappingURL=styles.css.map */
