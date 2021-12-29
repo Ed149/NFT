@@ -27,23 +27,32 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 3rem 0;
 }
 
 .card{
     background-color: $veryDarkBlueCard;
-    width:500px;
-    padding:40px;
+    width: 330px;
+    padding:25px;
+    
+    @include media-up(md){
+        width:500px;
+        padding:40px;
+    }   
     border-radius: 30px;    
     
     &__image{
         position: relative;
         transition: all 300ms ease-in;
-        border-radius: 20px;
+        border-radius: 12px;
         overflow: hidden;
         background-image:url('../img/image-equilibrium.jpg');
         background-size: cover;
         width: 100%;
-        height: 400px;
+        height: 300px;
+        @include media-up(md){
+            height: 400px;
+        }
         background-position: center center;
         
 
@@ -86,6 +95,11 @@ body{
     &__title{
         color: $white;
         margin:1.4rem 0;
+        font-size: 12px;
+        letter-spacing: 1px;
+        @include media-up(md){
+            font-size: 1rem;
+        }
         &:hover{
             cursor: pointer;
             color:$Cyan;
@@ -93,7 +107,12 @@ body{
     }
     &__text{
         color:$veryDarkBlueLine;
-        font-size: 15px;
+        font-size: 11px;
+        line-height: 1.7rem;
+        @include media-up(md){
+            font-size: 15px;
+        }
+
         margin-bottom: 1.4rem;
     }
     &__stats{
@@ -103,7 +122,11 @@ body{
         margin-bottom: 1.4rem;
         &-value{
             color:$Cyan;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
+            font-size: 16px;
+            @include media-up(md){
+                font-size: 1.5em;
+            }
         }
         &-time{
             font-size: $fontSize;
@@ -132,10 +155,16 @@ body{
         margin-top: 2.4rem;
                 
         &_img{
-            width: 60px;
+            width: 40px;
+            margin-right: .8rem;
+            @include media-up(md){
+                width: 60px;
+            margin-right: 1.3rem;
+
+
+            }
             border: 2px solid $white;
             border-radius: 50%;
-            margin-right: 1.3rem;
         }
         &_info{
             font-size: $fontSize;
